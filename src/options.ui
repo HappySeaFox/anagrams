@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Options</class>
+ <widget class="QDialog" name="Options">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>103</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search parameters</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Dictionary:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineDictionary"/>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolDictionary">
+       <property name="toolTip">
+        <string>Select a dictionary</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Starting word:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineWord"/>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Options</receiver>
+   <slot>slotAccept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Options</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>335</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolDictionary</sender>
+   <signal>clicked()</signal>
+   <receiver>Options</receiver>
+   <slot>slotSelectDictionary()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>410</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>559</x>
+     <y>71</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineDictionary</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Options</receiver>
+   <slot>slotCheckData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>622</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineWord</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Options</receiver>
+   <slot>slotCheckData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>580</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotAccept()</slot>
+  <slot>slotSelectDictionary()</slot>
+  <slot>slotCheckData()</slot>
+ </slots>
+</ui>
