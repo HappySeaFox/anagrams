@@ -1,4 +1,4 @@
-﻿## Anagram derivation finder.
+﻿## Anagram derivation finder
 
 <p align="center">
   <a href=".github/demo.jpg"><img src=".github/demo.jpg?raw=true" alt="Demo Screenshot"/></a>
