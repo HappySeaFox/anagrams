@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-project(anagrams VERSION 1.0.0)
+project(anagrams VERSION 1.0.1)
 
 set(PROJECT_LABEL "Anagrams")
 set(PROJECT_COPYRIGHT "Dmitry Baryshev")
