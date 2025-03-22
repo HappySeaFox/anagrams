@@ -11,6 +11,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# disable console window
+set(CMAKE_WIN32_EXECUTABLE ON)
+
 # find the Qt libraries
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
