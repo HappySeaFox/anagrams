@@ -7,8 +7,7 @@
 An anagram derivation is a N-letter word derived from a N-1 letter word by adding a letter and
 rearranging. For example, here is a derivation of "aliens": `ail + s = sail + n = nails + e = aliens`
 
-Anagram derivation finder finds the longest such derivation from a specific 3-letter word (one word
-provided by user) in a list of words where every derived word also exists in the list of words.
+The anagram derivation finder finds the longest such derivation from a specific 3-letter word (one word provided by the user) in a list of words where every derived word also exists in the list of words.
 words = `{ail, tennis, nails, desk, aliens, table, engine, sail, etc....}`.
 
 An English dictionary can be downloaded from here: https://github.com/dwyl/english-words
@@ -29,7 +28,7 @@ The unsorted word gets appended to the corresponding value in the hash.
 
 The corresponding value in the hash is a list of unsorted words (and yes, this is a list of possible anagrams!).
 
-Here it is an abstract example of a dictionary file:
+Here is an abstract example of a dictionary file:
 ```
 betas
 owla
@@ -51,7 +50,7 @@ This way we get the possible anagrams of the selected word and do that quickly. 
 
 Search the longest chain in the hash with `AnagramFinder`.
 
-AnagramFinder adds a single Latin character (from 'a' to 'z') to the word and gets all its anagrams, checks their lengths, and repeats the search recursively with the first found anagram. Pseudo code:
+AnagramFinder adds a single Latin character (from 'a' to 'z') to the word and gets all its anagrams, checks their lengths, and repeats the search recursively with the first found anagram. Pseudocode:
 ```
 hash = parseDictionary()
 
