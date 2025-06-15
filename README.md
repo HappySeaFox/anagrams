@@ -14,3 +14,11 @@ words = `{ail, tennis, nails, desk, aliens, table, engine, sail, etc....}`.
 An English dictionary can be downloaded from here: https://github.com/dwyl/english-words
 
 QProgressIndicator is taken from https://github.com/mojocorp/QProgressIndicator
+
+## Author
+
+Dzmitry Baryshau
+
+## License
+
+Released under the MIT license.
